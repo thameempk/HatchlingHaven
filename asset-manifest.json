@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/thameempk/HatchlingHaven/static/css/main.abba8e0d.css",
-    "main.js": "/thameempk/HatchlingHaven/static/js/main.b5cd8117.js",
-    "static/js/787.c56376a8.chunk.js": "/thameempk/HatchlingHaven/static/js/787.c56376a8.chunk.js",
-    "static/media/Your paragraph text.png": "/thameempk/HatchlingHaven/static/media/Your paragraph text.4607839bbc0954082013.png",
-    "static/media/fa-solid-900.ttf": "/thameempk/HatchlingHaven/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
-    "static/media/fa-brands-400.ttf": "/thameempk/HatchlingHaven/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
-    "static/media/fa-solid-900.woff2": "/thameempk/HatchlingHaven/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
-    "static/media/fa-brands-400.woff2": "/thameempk/HatchlingHaven/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
-    "static/media/WhatsApp Image 2023-11-28 at 16.52.35_1f833ebf.jpg": "/thameempk/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.35_1f833ebf.d93201450ada70d70b06.jpg",
-    "static/media/WhatsApp Image 2023-11-28 at 16.52.34_437d8868.jpg": "/thameempk/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.34_437d8868.1773ded2bc49e3010d4c.jpg",
-    "static/media/WhatsApp Image 2023-11-28 at 16.52.36_97238268.jpg": "/thameempk/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.36_97238268.93161a3ab0bb641a4b12.jpg",
-    "static/media/fa-regular-400.ttf": "/thameempk/HatchlingHaven/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
-    "static/media/fa-regular-400.woff2": "/thameempk/HatchlingHaven/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
-    "static/media/fa-v4compatibility.ttf": "/thameempk/HatchlingHaven/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
-    "static/media/fa-v4compatibility.woff2": "/thameempk/HatchlingHaven/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
-    "index.html": "/thameempk/HatchlingHaven/index.html",
-    "main.abba8e0d.css.map": "/thameempk/HatchlingHaven/static/css/main.abba8e0d.css.map",
-    "main.b5cd8117.js.map": "/thameempk/HatchlingHaven/static/js/main.b5cd8117.js.map",
-    "787.c56376a8.chunk.js.map": "/thameempk/HatchlingHaven/static/js/787.c56376a8.chunk.js.map"
+    "main.css": "/HatchlingHaven/static/css/main.48fc254e.css",
+    "main.js": "/HatchlingHaven/static/js/main.b2718ece.js",
+    "static/js/787.c56376a8.chunk.js": "/HatchlingHaven/static/js/787.c56376a8.chunk.js",
+    "static/media/Your paragraph text.png": "/HatchlingHaven/static/media/Your paragraph text.4607839bbc0954082013.png",
+    "static/media/fa-solid-900.ttf": "/HatchlingHaven/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
+    "static/media/fa-brands-400.ttf": "/HatchlingHaven/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
+    "static/media/fa-solid-900.woff2": "/HatchlingHaven/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
+    "static/media/fa-brands-400.woff2": "/HatchlingHaven/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
+    "static/media/WhatsApp Image 2023-11-28 at 16.52.35_1f833ebf.jpg": "/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.35_1f833ebf.d93201450ada70d70b06.jpg",
+    "static/media/WhatsApp Image 2023-11-28 at 16.52.34_437d8868.jpg": "/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.34_437d8868.1773ded2bc49e3010d4c.jpg",
+    "static/media/WhatsApp Image 2023-11-28 at 16.52.36_97238268.jpg": "/HatchlingHaven/static/media/WhatsApp Image 2023-11-28 at 16.52.36_97238268.93161a3ab0bb641a4b12.jpg",
+    "static/media/fa-regular-400.ttf": "/HatchlingHaven/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
+    "static/media/fa-regular-400.woff2": "/HatchlingHaven/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
+    "static/media/fa-v4compatibility.ttf": "/HatchlingHaven/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
+    "static/media/fa-v4compatibility.woff2": "/HatchlingHaven/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
+    "index.html": "/HatchlingHaven/index.html",
+    "main.48fc254e.css.map": "/HatchlingHaven/static/css/main.48fc254e.css.map",
+    "main.b2718ece.js.map": "/HatchlingHaven/static/js/main.b2718ece.js.map",
+    "787.c56376a8.chunk.js.map": "/HatchlingHaven/static/js/787.c56376a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abba8e0d.css",
-    "static/js/main.b5cd8117.js"
+    "static/css/main.48fc254e.css",
+    "static/js/main.b2718ece.js"
   ]
 }
