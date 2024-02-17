@@ -1,0 +1,29 @@
+.cart-table{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cart-image{
+    max-height: 5rem;
+}
+.td-pad{
+    vertical-align: middle;
+}
+.th-pad{
+    vertical-align: middle;
+}
+.cart-tab{
+    max-width: 80rem;
+}
+.cart-tab td{
+    font-size:15px;
+    font-weight: 600;
+}
+.cart-tab2 td{
+    font-size:15px;
+    font-weight: 600;
+}
+.cart-title{
+    font-size: 50px;
+    font-family: 'Pacifico', cursive
+}

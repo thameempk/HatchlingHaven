@@ -1,0 +1,34 @@
+.ind{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.child1{
+    max-width: 35%;
+}
+.child2{
+    max-width: 55%;
+    margin-left: 20px;
+}
+.ind img{
+    width: 25rem;
+}
+@media screen and (max-width: 766px) {
+    .child1, .child2{
+        max-width: 100%;
+    }
+}
+.p1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.p2{
+    float: left;
+    font-weight: 600;
+    font-size: 20px;
+}
+.p3{
+    line-height: 23px;
+    font-size: 20px;
+    font-weight: 600;
+}

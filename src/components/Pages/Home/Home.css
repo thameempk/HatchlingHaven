@@ -1,0 +1,41 @@
+/* .home{
+    margin-top: -60px;
+
+} */
+.headings{
+    color: #3c5073;
+}
+.cart-add{
+    color: black;
+}
+.main-con{
+    display: flex;
+}
+.card-up{
+    margin-top: 30px;
+    
+    max-height: 18rem ;
+    max-width: 10rem;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color: white;
+}
+.card-up:hover{
+    cursor: pointer;
+    border: 1px dotted black;
+}
+.main-item{
+    text-decoration: none;
+}
+
+.card-up img{
+    max-height: 8rem ;
+
+}
+.delivery{
+    font-size: 13px;
+}
+.item-price{
+    font-size: 12px;
+}

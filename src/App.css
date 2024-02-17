@@ -1,0 +1,12 @@
+.App {
+  width: 100%;
+  text-align: center;
+  /* background-color: rgba(242,242,242,255); */
+  min-height: 800px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
