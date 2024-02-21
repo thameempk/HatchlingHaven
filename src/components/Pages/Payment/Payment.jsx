@@ -10,6 +10,7 @@ import "./Payment.css"
 import Signin from '../User/Signin';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 function Payment({total, cart, orderTotal, isLoged, orderPlace}) {
   const {order, ordersec, orderItems, totalPrice, placeOrder, token, userName, userEmail} = useContext(MyContext3)
@@ -17,6 +18,7 @@ function Payment({total, cart, orderTotal, isLoged, orderPlace}) {
   const [raz, setRaz] = useState(null)
   const [orderStatus, setOrderStatus] = useState(false)
   const [orderDetails, setOrderDetails] = useState(null)
+  const nav = useNavigate()
 
   const loadScript = (src) => {
     return new Promise((res) => {
@@ -145,6 +147,7 @@ const handlePayment = async (price) => {
          console.log(result)
          if(result) {
           toast.success("order successfully  placed");
+          nav()
          }else{
           toast.error("order  placement failed");
          }

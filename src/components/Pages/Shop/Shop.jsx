@@ -9,13 +9,15 @@ import Card from 'react-bootstrap/Card';
 import { FaFilter } from "react-icons/fa";
 import Pagination from '@mui/material/Pagination';
 import { MDBBtn } from 'mdb-react-ui-kit';
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { MDBPagination, MDBPaginationItem, MDBPaginationLink } from 'mdb-react-ui-kit';
 import "./Shop.css"
 import axios from 'axios';
 import { Nav } from 'react-bootstrap';
 function Shop({ cartPlus, cartMin, ViewItem, priceItem }) {
   const { item } = useContext(MyContext2)
-  const { addCart, token } = useContext(MyContext3)
+  const { addCart, token,addToWishList, removeWishListItem,wishListExist, wishListItems } = useContext(MyContext3)
   const nav = useNavigate()
   const [pagProduct, setPagProduct] = useState([{}])
   const [categories, setCategories] = useState([{}])
@@ -51,7 +53,6 @@ function Shop({ cartPlus, cartMin, ViewItem, priceItem }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   useEffect(() => {
     categoriesList()
     paginatedProduct()
@@ -90,7 +91,10 @@ function Shop({ cartPlus, cartMin, ViewItem, priceItem }) {
             pagProduct.map((item) => (
               <div className='col-md-3 col-12 mt-2 container' key={item.id} style={{ display: "flex", justifyContent: "center" }}>
                 <CardGroup>
-                  <Card style={{ width: "15rem", minHeight: "26rem", paddingBottom: "5px", display: "flex", alignItems: "center", justifyContent: "center" }} className='shadow d-flex'>
+               
+                  <Card style={{ width: "15rem", minHeight: "26rem", padding: "5px", display: "flex", alignItems: "center", justifyContent: "center" }} className='shadow d-flex'>
+                  { wishListItems?.some((prd)=> prd.id == item.id) ? <FaHeart style={{position:"absolute", marginTop:"-160%",marginRight:"80%", fontSize:"20px"}} onClick={()=>addToWishList(item.id)}/> :  <FaRegHeart  style={{position:"absolute", marginTop:"-160%",marginRight:"80%", fontSize:"20px"}} onClick={()=>addToWishList(item.id)}/>}
+                  
                     <Link style={{ textDecoration: "none", color: "black" }} to={`/${item.id}`}>
                       <div className='bg-image hover-zoom'>
                         <Card.Img variant="top" src={item.productImage} className='img-fluid mt-2 w70' style={{ height: "10rem", width: "10rem" }} />

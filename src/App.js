@@ -231,7 +231,6 @@ const RegisterUser = async (userDetails) => {
 
   const cartSecPlus = async (id) => {
     try{
-      console.log(typeof id)
       let response = await axios.put(`http://localhost:5237/api/Cart/add-quantity?productId=${id}`,null,{
         headers: {
           'Content-Type': 'application/json',
@@ -277,6 +276,64 @@ const RegisterUser = async (userDetails) => {
     setTotalPrice(totalPrice)
     navigate('/payment')
   }
+  const addToWishList = async (id) => {
+    try{
+      let response = await axios.post(`http://localhost:5237/api/WhishList/add-whishlist?productId=${id}`,null,
+      {
+        headers : {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+      let result = await response.data
+    }catch(err){
+      console.log(err)
+    }
+  }
+  
+  const [wishListItems, setWhishListItem] = useState([{}])
+  const getWishList = async () => {
+    try{
+      let response = await axios.get(`http://localhost:5237/api/WhishList/get-whishlist`,
+      {
+        headers : {
+          "Authorization" : `Bearer ${token}`
+        }
+      })
+      let result = await response.data
+      setWhishListItem(result)
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  const removeWishListItem = async (id) => {
+    try{
+    let response = await axios.delete(`http://localhost:5237/api/WhishList/remove-whishlist?productId=${id}`,
+      {
+        headers : {
+          "Authorization" : `Bearer ${token}`
+        }
+      })
+      let result = await response.data
+      setWhishListItem(result)
+    }catch(err){
+      console.log(err)
+    }
+  }
+  const wishListExist =  async (id,name) =>{
+    try{
+      let response = await axios.post(`http://localhost:5237/api/WhishList/isWishListExist?productId=${id}`,null,
+        {
+          headers : {
+            "Authorization" : `Bearer ${token}`
+          }
+        })
+        let result = await response.data
+        return result
+      }catch(err){
+        console.log(err)
+      }
+  } 
 
 
 
@@ -360,6 +417,7 @@ const RegisterUser = async (userDetails) => {
 
       useEffect(()=> {
         getProductData()
+        getWishList()
         setToken(Cookies.get('token'))
         setRole(Cookies.get('role'))
         setUserEmail(Cookies.get('email'))
@@ -371,7 +429,7 @@ const RegisterUser = async (userDetails) => {
   return (
     <div className="App">
       <MyContext3.Provider
-        value={{  addCart, placeOrder, order, prd, ordersec, item , token, role, logOut, orderItems, totalPrice, placeOrder , log, userName, userEmail, searchProduct, serachProducts}}
+        value={{  addCart, placeOrder, order, prd, ordersec, item , token, role, logOut, orderItems, totalPrice, placeOrder , log, userName, userEmail, searchProduct, serachProducts, addToWishList, wishListItems, removeWishListItem,wishListExist}}
       >
         <MyContext2.Provider value={{ item, setItems }}>
           <MyContext1.Provider value={{login, user, setUser}}>

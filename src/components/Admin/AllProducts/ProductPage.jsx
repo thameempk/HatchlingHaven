@@ -50,20 +50,28 @@ function ProductPage() {
    
     const handleUpdate = async (id) =>{
         try {
-            const res = await fetch(singleProduct.productImage, {
+            const res = await fetch(`http://localhost:5237/api/Product/get-product-image?productId=${id}`,
+           {
+                method : "GET",
                 headers : {
                     "Authorization" : `Bearer ${token}`
                 }
             });
             const blob = await res.blob();
-            const file = new File([blob], 'image.jpg', { type: 'image/jpeg' });
+            const file =  new File([blob], 'default.jpg', { type: 'image/jpeg' });
             const defCatId = categories.find((item) => item.name == singleProduct?.category)
             const formdata = new FormData()
             formdata.append('productDto.ProductName', updatedItem.productName || singleProduct.productName)
             formdata.append('productDto.price', updatedItem.price || singleProduct.price)
             formdata.append('productDto.categoryId', categoryId || defCatId.id)            
             formdata.append('productDto.productDescription', updatedItem.productDescription || singleProduct.productDescription) 
-            formdata.append('image', image || file);           
+            if(image != null){
+                formdata.append('image', image);   
+            }else{
+                
+                formdata.append('image', file );  
+            }
+                    
             
             let response = await axios.put(`http://localhost:5237/api/Product/${id}`, formdata, {
                 headers  :  {
